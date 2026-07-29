@@ -46,9 +46,16 @@ export default function Screenshots() {
               let offset = i - index
               if (offset > N / 2) offset -= N
               if (offset < -N / 2) offset += N
-              if (Math.abs(offset) > 1) return null
+              const abs = Math.abs(offset)
+              const style = {
+                transform: `translateX(${offset * 70}%) scale(${Math.max(1 - abs * 0.18, 0.5)})`,
+                opacity: abs === 0 ? 1 : Math.max(0.45 - (abs - 1) * 0.25, 0),
+                filter: abs === 0 ? 'none' : 'blur(1px)',
+                zIndex: 10 - abs,
+                pointerEvents: abs === 0 ? 'auto' : 'none',
+              }
               return (
-                <div className={`screenshot-slide-card offset-${offset}`} key={s.label}>
+                <div className="screenshot-slide-card" style={style} key={s.label}>
                   <img src={s.src} alt={`${s.label} screen`} />
                 </div>
               )

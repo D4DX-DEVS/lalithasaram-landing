@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Logo from './Logo.jsx'
+import d4dxLogo from '../assets/d4dx_logo.png'
 
 export default function Footer() {
   return (
@@ -37,7 +38,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2026 Quran Lalithasaram. All rights reserved.<br />Powered by <a href="https://d4dx.co/" target="_blank" rel="noopener noreferrer">D4DX</a></span>
+          <span>
+            © 2026 Quran Lalithasaram. All rights reserved.<br />
+            Powered by <a href="https://d4dx.co/" target="_blank" rel="noopener noreferrer" className="powered-by-link">D4DX <img src={d4dxLogo} alt="D4DX" className="powered-by-logo" /></a>
+          </span>
           <div className="flinks">
             <Link to="/privacy-policy">Privacy</Link><Link to="/terms-conditions">Terms</Link><a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@d4dx.co" target="_blank" rel="noopener noreferrer">info@d4dx.co</a>
           </div>
