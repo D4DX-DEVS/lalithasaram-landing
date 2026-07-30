@@ -1,9 +1,9 @@
 import appIcon from '../assets/icon-1024b.png'
 
 const POINTS = [
-  { title: 'Clear, everyday Malayalam', desc: "No difficult words — meanings explained the way you'd explain to a friend." },
-  { title: 'Built for daily reflection', desc: 'Read a little every day and carry its guidance into your life.' },
-  { title: 'Free access for everyone', desc: 'Supported entirely by the generosity of readers like you.' },
+  { title: 'Clear, Everyday Malayalam', desc: 'Simple explanations without difficult words.' },
+  { title: 'Built for Daily Reflection', desc: 'Read a little every day and live by its guidance.' },
+  { title: 'Free for Everyone', desc: 'Made possible through the generous support of readers like you.' },
 ]
 
 export default function About() {
@@ -15,15 +15,14 @@ export default function About() {
         </div>
         <div>
           <span className="eyebrow">Why Lalithasaram</span>
-          <h2>A simpler path to the meanings of the Qur'an</h2>
+          <h2>A Simpler Path to the Meanings of the Qur'an</h2>
           <p>
-            The "Quran Lalithasaram" app and website have been developed with the aim of helping ordinary
-            readers understand the messages, meanings, and teachings of the Holy Qur'an in a simple, clear,
-            and accessible manner.
+            The Quran Lalithasaram app and website have been developed to help ordinary readers understand
+            the messages, meanings, and teachings of the Holy Qur'an in a simple, clear, and accessible way.
           </p>
           <p>
-            This digital platform is designed to help you develop a deeper connection with the Holy Qur'an,
-            reflect upon its meanings, and apply its divine guidance in your daily life.
+            This digital platform is designed to deepen your connection with the Qur'an, encourage reflection
+            on its meanings, and help you apply its divine guidance in your daily life.
           </p>
           <div className="about-points">
             {POINTS.map(p => (

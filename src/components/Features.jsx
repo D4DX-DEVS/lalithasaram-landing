@@ -1,5 +1,5 @@
 const FEATURES = [
-  { title: 'Simple Malayalam Tafseer', desc: 'Every ayah explained in plain, everyday Malayalam — free of complex theological jargon.', path: 'M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V2H6.5A2.5 2.5 0 004 4.5v15z' },
+  { title: 'Simple Malayalam Translation', desc: 'Every verse translated into simple, natural Malayalam—clear, accurate, and easy to understand.', path: 'M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V2H6.5A2.5 2.5 0 004 4.5v15z' },
   { title: 'Beautiful Audio Recitation', desc: 'Listen to trusted reciters while following along with word-by-word meaning.', path: 'M9 18V5l12-2v13M9 18a3 3 0 11-6 0 3 3 0 016 0zM21 16a3 3 0 11-6 0 3 3 0 016 0z' },
   { title: 'Word-by-word Meaning', desc: 'Tap any Arabic word to instantly see its Malayalam meaning and root context.', path: 'M12 3v18M5 8l7-5 7 5M5 8v11a1 1 0 001 1h12a1 1 0 001-1V8' },
   { title: 'Bookmarks & Notes', desc: 'Save verses that move you and add your own personal reflections beside them.', path: 'M19 21l-7-4-7 4V5a2 2 0 012-2h10a2 2 0 012 2z' },
