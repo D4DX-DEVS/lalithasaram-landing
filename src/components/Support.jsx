@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import supportQr from '../assets/support-qr.png'
+import supportQr from '../assets/support-qr.webp'
 
 const REASONS = [
   "Be a part of spreading the light of the Qur'an",

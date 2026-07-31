@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Logo from './Logo.jsx'
-import d4dxLogo from '../assets/d4dx_logo.png'
+import d4dxLogo from '../assets/d4dx_logo.webp'
 
 export default function Footer() {
   return (

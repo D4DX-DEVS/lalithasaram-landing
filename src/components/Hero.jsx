@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import landingScn1 from '../assets/landing-scn1.png'
-import landingScn2 from '../assets/landing-scn2.png'
-import landingScn3 from '../assets/landing-scn3.png'
+import landingScn1 from '../assets/landing-scn1.webp'
+import landingScn2 from '../assets/landing-scn2.webp'
+import landingScn3 from '../assets/landing-scn3.webp'
 
 const HERO_IMAGES = [
   { src: landingScn1 },
