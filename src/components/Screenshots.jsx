@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import home from '../assets/screenshots/02-home.jpeg'
-import mushaf from '../assets/screenshots/03-mushaf.jpeg'
+import mushaf from '../assets/screenshots/mushaf.jpeg'
 import audio from '../assets/screenshots/04-audio.jpeg'
 import settings from '../assets/screenshots/05-settings.jpeg'
 import ayahNormal from '../assets/screenshots/06-ayah-normal.jpeg'

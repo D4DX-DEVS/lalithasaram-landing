@@ -1,6 +1,24 @@
-import homeScreenshot from '../assets/screenshots/02-home.jpeg'
+import { useEffect, useState } from 'react'
+import landingScn1 from '../assets/landing-scn1.png'
+import landingScn2 from '../assets/landing-scn2.png'
+import landingScn3 from '../assets/landing-scn3.png'
+
+const HERO_IMAGES = [
+  { src: landingScn1 },
+  { src: landingScn2, style: { height: '70%', top: '50%', transform: 'translateY(-50%)' } },
+  { src: landingScn3 },
+]
 
 export default function Hero() {
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex(i => (i + 1) % HERO_IMAGES.length)
+    }, 2000)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <section className="hero">
       <div className="bg-blob b1"></div>
@@ -26,17 +44,16 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="phone-wrap">
-          <div className="phone">
-            <div className="phone-btn action"></div>
-            <div className="phone-btn vol-up"></div>
-            <div className="phone-btn vol-down"></div>
-            <div className="phone-btn power"></div>
-            <div className="phone-btn camera-control"></div>
-            <div className="phone-screen">
-              <img src={homeScreenshot} alt="Quran Lalithasaram app home screen" className="phone-screen-img active" style={{ objectPosition: 'top' }} />
-            </div>
-          </div>
+        <div className="hero-visual">
+          {HERO_IMAGES.map((img, i) => (
+            <img
+              key={img.src}
+              src={img.src}
+              alt="Quran Lalithasaram app preview"
+              className={`hero-visual-img${i === index ? ' active' : ''}`}
+              style={img.style}
+            />
+          ))}
         </div>
       </div>
     </section>
