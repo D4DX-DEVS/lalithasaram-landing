@@ -11,12 +11,20 @@ const FEATURES = [
 ]
 
 const N = FEATURES.length
-const VISIBLE = 4
-const SLIDES = [...FEATURES, ...FEATURES.slice(0, VISIBLE)]
+const MAX_VISIBLE = 4
+const SLIDES = [...FEATURES, ...FEATURES.slice(0, MAX_VISIBLE)]
 
-function FeatureCard({ f }) {
+function getVisibleCount() {
+  if (typeof window === 'undefined') return MAX_VISIBLE
+  const w = window.innerWidth
+  if (w < 640) return 1
+  if (w < 980) return 2
+  return MAX_VISIBLE
+}
+
+function FeatureCard({ f, basis }) {
   return (
-    <div className="feature-slide">
+    <div className="feature-slide" style={{ flexBasis: `${basis}%` }}>
       <div className="feature-card">
         <div className="feature-card-head">
           <div className="feature-icon">
@@ -37,7 +45,15 @@ function FeatureCard({ f }) {
 export default function Features() {
   const [pos, setPos] = useState(0)
   const [animate, setAnimate] = useState(true)
+  const [visible, setVisible] = useState(getVisibleCount)
   const dotIndex = pos % N
+  const slideBasis = 100 / visible
+
+  useEffect(() => {
+    const onResize = () => setVisible(getVisibleCount())
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -73,11 +89,11 @@ export default function Features() {
           <div
             className="feature-track"
             style={{
-              transform: `translateX(-${pos * (100 / VISIBLE)}%)`,
+              transform: `translateX(-${pos * slideBasis}%)`,
               transition: animate ? 'transform .6s cubic-bezier(.65,0,.35,1)' : 'none',
             }}
           >
-            {SLIDES.map((f, i) => <FeatureCard f={f} key={i} />)}
+            {SLIDES.map((f, i) => <FeatureCard f={f} basis={slideBasis} key={i} />)}
           </div>
         </div>
         <div className="feature-dots">

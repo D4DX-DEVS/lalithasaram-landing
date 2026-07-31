@@ -13,7 +13,7 @@
   --radius: 20px;
 }
 *{box-sizing:border-box; margin:0; padding:0;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth; overflow-x:hidden; width:100%;}
 body{
   font-family:'Manrope', 'Noto Sans Malayalam', sans-serif;
   background:var(--bg);
@@ -49,11 +49,13 @@ nav{
   padding:14px 24px; max-width:1180px; margin:0 auto;
 }
 .logo{display:block;}
-.nav-links{display:flex; gap:32px; align-items:center;}
+.nav-links{gap:32px; align-items:center;}
 .nav-links a{
   font-size:14.5px; font-weight:600; color:var(--text-dim); transition:color .2s;
 }
 .nav-links a:hover{color:var(--text);}
+.nav-links.desktop-only{display:flex;}
+.nav-links.mobile-panel{display:none;}
 .nav-cta{
   padding:10px 22px; border-radius:999px; background:var(--gradient);
   font-weight:700; font-size:14px; color:#fff !important;
@@ -151,7 +153,7 @@ nav{
 .features{padding:64px 0; background:var(--bg-2); border-top:1px solid var(--card-brd); border-bottom:1px solid var(--card-brd);}
 .feature-carousel{overflow:hidden;}
 .feature-track{display:flex;}
-.feature-slide{flex:0 0 25%; box-sizing:border-box; padding:0 12px;}
+.feature-slide{flex-shrink:0; box-sizing:border-box; padding:0 12px;}
 .feature-card{
   height:100%; min-height:210px; background:var(--card); border:1px solid var(--card-brd); border-radius:var(--radius);
   padding:24px 22px; box-shadow:0 20px 40px -30px rgba(11,17,32,.25);
@@ -328,27 +330,61 @@ footer{padding:48px 0 24px; border-top:1px solid var(--card-brd);}
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 980px){
-  .nav-links{
-    position:fixed; top:70px; left:0; right:0; bottom:0; background:var(--bg);
+  .nav-links.desktop-only{display:none;}
+  .nav-links.mobile-panel{
+    display:flex; position:fixed; top:70px; left:0; right:0; bottom:0; background:var(--bg);
     flex-direction:column; padding:30px 24px; gap:24px; transform:translateX(100%);
-    transition:transform .3s; z-index:99;
+    transition:transform .3s; z-index:200;
   }
-  .nav-links.open{transform:translateX(0);}
+  .nav-links.mobile-panel.open{transform:translateX(0);}
   .nav-toggle{display:flex;}
   .hero-inner, .about-inner{grid-template-columns:1fr;}
   .hero-visual{order:-1; margin-bottom:20px; height:380px;}
-  .how-steps{grid-template-columns:1fr;}
+  .how-steps{grid-template-columns:1fr; gap:20px;}
   .support-inner{grid-template-columns:1fr;}
   .support-qr{border-right:none; border-bottom:1px solid var(--card-brd);}
   .support-details{padding:40px;}
   .support-reasons{grid-template-columns:1fr;}
-  .footer-grid{grid-template-columns:1fr 1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr; gap:32px;}
+  .screenshot-stage{width:220px;}
 }
 @media (max-width: 640px){
-  .hero h1{font-size:36px;}
-  .hero h1 .ml{font-size:30px;}
-  .footer-grid{grid-template-columns:1fr;}
-  .section-head h2{font-size:28px;}
+  .container{padding:0 18px;}
+  .hero{padding:40px 0 36px;}
+  .hero h1{font-size:32px; line-height:1.2;}
+  .hero h1 .ml{font-size:26px;}
+  .hero p.lead{font-size:15.5px; margin-bottom:28px;}
+  .hero-actions{margin-bottom:32px;}
+  .hero-visual{height:300px;}
+  .btn{padding:12px 20px; font-size:14px;}
+  .about, .features, .how, .screenshots, .support, .faq{padding:44px 0;}
+  .section-head{margin-bottom:28px;}
+  .section-head h2{font-size:26px;}
+  .section-head p{font-size:14.5px;}
+  .about h2{font-size:26px;}
+  .about-visual{margin-bottom:8px;}
+  .feature-slide{padding:0 6px;}
+  .feature-card{padding:20px 18px; min-height:180px;}
+  .screenshot-coverflow{gap:8px;}
+  .screenshot-nav{width:36px; height:36px;}
+  .screenshot-nav svg{width:15px; height:15px;}
+  .screenshot-stage{width:190px;}
+  .support-qr{padding:32px 24px;}
+  .support-details{padding:28px 24px;}
+  .support-details h2{font-size:22px;}
+  .qr-box{width:170px; height:170px;}
+  .bank-table td{font-size:13.5px;}
+  .upi-pill{font-size:12.5px; padding:10px 14px; flex-wrap:wrap;}
+  .faq-question{padding:16px 18px; font-size:14.5px;}
+  .faq-answer{padding:0 18px 16px; font-size:14px;}
+  .footer-grid{grid-template-columns:1fr; gap:28px;}
+  .footer-bottom{flex-direction:column; align-items:flex-start; gap:14px;}
   .download-card{padding:50px 24px;}
   .float-card{display:none;}
+}
+@media (max-width: 400px){
+  .screenshot-stage{width:160px;}
+  .qr-box{width:150px; height:150px;}
+  .hero h1{font-size:28px;}
+  .hero h1 .ml{font-size:22px;}
 }

@@ -13,19 +13,27 @@ export default function Header() {
   ]
 
   return (
-    <header>
-      <nav>
-        <Logo />
-        <ul className={`nav-links${open ? ' open' : ''}`}>
-          {links.map(l => (
-            <li key={l.href}><a href={l.href} onClick={() => setOpen(false)}>{l.label}</a></li>
-          ))}
-          <li><a href="/#download" className="nav-cta" onClick={() => setOpen(false)}>Get App</a></li>
-        </ul>
-        <button className="nav-toggle" aria-label="Menu" onClick={() => setOpen(o => !o)}>
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </header>
+    <>
+      <header>
+        <nav>
+          <Logo />
+          <ul className="nav-links desktop-only">
+            {links.map(l => (
+              <li key={l.href}><a href={l.href}>{l.label}</a></li>
+            ))}
+            <li><a href="/#download" className="nav-cta">Get App</a></li>
+          </ul>
+          <button className="nav-toggle" aria-label="Menu" onClick={() => setOpen(o => !o)}>
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </header>
+      <ul className={`nav-links mobile-panel${open ? ' open' : ''}`}>
+        {links.map(l => (
+          <li key={l.href}><a href={l.href} onClick={() => setOpen(false)}>{l.label}</a></li>
+        ))}
+        <li><a href="/#download" className="nav-cta" onClick={() => setOpen(false)}>Get App</a></li>
+      </ul>
+    </>
   )
 }
