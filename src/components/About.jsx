@@ -1,4 +1,4 @@
-import appIcon from '../assets/icon-1024b.png'
+import appIcon from '../assets/icon-1024b.webp'
 
 const POINTS = [
   { title: 'Clear, Everyday Malayalam', desc: 'Simple explanations without difficult words.' },

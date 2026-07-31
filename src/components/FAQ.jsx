@@ -37,7 +37,7 @@ const FAQS = [
 ]
 
 export default function FAQ() {
-  const [open, setOpen] = useState(0)
+  const [open, setOpen] = useState(-1)
 
   return (
     <section className="faq" id="faq">

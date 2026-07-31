@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import home from '../assets/screenshots/02-home.jpeg'
-import mushaf from '../assets/screenshots/mushaf.jpeg'
-import audio from '../assets/screenshots/04-audio.jpeg'
-import settings from '../assets/screenshots/05-settings.jpeg'
-import ayahNormal from '../assets/screenshots/06-ayah-normal.jpeg'
-import ayahWordByWord from '../assets/screenshots/07-ayah-wordbyword.jpeg'
+import home from '../assets/screenshots/02-home.webp'
+import mushaf from '../assets/screenshots/mushaf.webp'
+import audio from '../assets/screenshots/04-audio.webp'
+import settings from '../assets/screenshots/05-settings.webp'
+import ayahNormal from '../assets/screenshots/06-ayah-normal.webp'
+import ayahWordByWord from '../assets/screenshots/07-ayah-wordbyword.webp'
 
 const SHOTS = [
   { src: home, label: 'Home' },
