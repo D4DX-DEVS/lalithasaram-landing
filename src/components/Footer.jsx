@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <Logo markSize={36} />
-            <p>Helping ordinary readers understand the messages, meanings and teachings of the Holy Qur'an — simply, clearly, and free for everyone.</p>
+            <p>വിശുദ്ധ ഖുർആന്റെ സന്ദേശങ്ങളും ആശയങ്ങളും പഠനങ്ങളും സാധാരണക്കാർക്ക് ലളിതമായും വ്യക്തമായും എല്ലാവർക്കും സൗജന്യമായും മനസ്സിലാക്കാൻ സഹായിക്കുന്നു.</p>
           </div>
           <div className="footer-col">
             <h4>Explore</h4>

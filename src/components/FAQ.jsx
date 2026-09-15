@@ -2,37 +2,38 @@ import { useState } from 'react'
 
 const FAQS = [
   {
-    q: 'Is the app free to use?',
-    a: 'Yes, Quran Lalithasaram is completely free on Android, iOS and the web — no ads, no subscriptions.',
+    q: 'ആപ്പ് ഉപയോഗിക്കാൻ സൗജന്യമാണോ?',
+    a: 'അതെ, ഖുർആൻ ലളിതസാരം Android, iOS, വെബ് എന്നിവയിൽ പൂർണ്ണമായും സൗജന്യമാണ് — പരസ്യങ്ങളില്ല, സബ്സ്ക്രിപ്ഷനുകളില്ല.',
   },
   {
-    q: 'What languages are supported?',
-    a: 'The Qur\'an text is in Arabic, with word-by-word Malayalam meaning and audio recitation in Malayalam alongside the original Arabic recitation. The app interface is in English.',
+    q: 'ഏതെല്ലാം ഭാഷകൾ പിന്തുണയ്ക്കുന്നു?',
+    a: 'ഖുർആൻ വാചകം അറബിയിലാണ്, വാക്ക് തിരിച്ചുള്ള മലയാളം അർത്ഥവും ഒറിജിനൽ അറബി പാരായണത്തോടൊപ്പം മലയാളം ഓഡിയോ പാരായണവും ലഭ്യമാണ്. ആപ്പിന്റെ ഇന്റർഫേസ് ഇംഗ്ലീഷിലാണ്.',
   },
   {
-    q: 'Can I listen to audio offline?',
-    a: 'Yes — download a Surah once and play its audio anytime after that, even without an internet connection.',
+    q: 'ഓഫ്‌ലൈനായി ഓഡിയോ കേൾക്കാൻ കഴിയുമോ?',
+    a: 'അതെ — ഒരു സൂറത്ത് ഒരിക്കൽ ഡൗൺലോഡ് ചെയ്താൽ, ഇന്റർനെറ്റ് ഇല്ലാതെ തന്നെ എപ്പോൾ വേണമെങ്കിലും അതിന്റെ ഓഡിയോ പ്ലേ ചെയ്യാം.',
   },
   {
-    q: 'Where can I download the app?',
+    q: 'ആപ്പ് എവിടെ നിന്ന് ഡൗൺലോഡ് ചെയ്യാം?',
     a: (
       <>
-        Check the Lalithasaram app on{' '}
+        ലളിതസാരം ആപ്പ്{' '}
         <a href="https://play.google.com/store/apps/details?id=com.d4media.lalithasaram" target="_blank" rel="noopener noreferrer">Google Play</a>
-        {' '}or the{' '}
+        {' '}അല്ലെങ്കിൽ{' '}
         <a href="https://apps.apple.com/in/app/quran-lalithasaram/id1180558504" target="_blank" rel="noopener noreferrer">App Store</a>
-        {' '}for full details, or read directly on{' '}
-        <a href="https://lalithasaram.net/" target="_blank" rel="noopener noreferrer">lalithasaram.net</a>.
+        {' '}ൽ പൂർണ്ണ വിവരങ്ങൾക്കായി പരിശോധിക്കുക, അല്ലെങ്കിൽ നേരിട്ട്{' '}
+        <a href="https://lalithasaram.net/" target="_blank" rel="noopener noreferrer">lalithasaram.net</a>
+        {' '}ൽ വായിക്കുക.
       </>
     ),
   },
   {
-    q: 'Is my data secure?',
-    a: 'The app does not collect any personal user data. See our full Privacy Policy for details.',
+    q: 'എന്റെ ഡാറ്റ സുരക്ഷിതമാണോ?',
+    a: 'ആപ്പ് ഒരു വ്യക്തിഗത ഉപയോക്തൃ ഡാറ്റയും ശേഖരിക്കുന്നില്ല. കൂടുതൽ വിവരങ്ങൾക്ക് ഞങ്ങളുടെ പൂർണ്ണ Privacy Policy കാണുക.',
   },
   {
-    q: 'How can I support the project?',
-    a: 'This platform runs on reader contributions. Use the Support Us section above to donate via UPI or bank transfer — every contribution helps keep it free for everyone.',
+    q: 'എനിക്ക് എങ്ങനെ ഈ പദ്ധതിയെ പിന്തുണയ്ക്കാം?',
+    a: 'ഈ പ്ലാറ്റ്ഫോം വായനക്കാരുടെ സംഭാവനകളിലൂടെയാണ് പ്രവർത്തിക്കുന്നത്. UPI വഴിയോ ബാങ്ക് ട്രാൻസ്ഫർ വഴിയോ സംഭാവന ചെയ്യാൻ മുകളിലുള്ള "പിന്തുണയ്ക്കൂ" വിഭാഗം ഉപയോഗിക്കുക — ഓരോ സംഭാവനയും ഇത് എല്ലാവർക്കും സൗജന്യമായി നിലനിർത്താൻ സഹായിക്കുന്നു.',
   },
 ]
 
@@ -43,9 +44,9 @@ export default function FAQ() {
     <section className="faq" id="faq">
       <div className="container">
         <div className="section-head">
-          <span className="eyebrow">FAQ</span>
-          <h2>Frequently Asked Questions</h2>
-          <p>Find answers to common questions about Quran Lalithasaram.</p>
+          <span className="eyebrow">ചോദ്യങ്ങൾ</span>
+          <h2>പതിവായി ചോദിക്കുന്ന ചോദ്യങ്ങൾ</h2>
+          <p>ഖുർആൻ ലളിതസാരത്തെക്കുറിച്ചുള്ള സാധാരണ ചോദ്യങ്ങൾക്കുള്ള ഉത്തരങ്ങൾ കണ്ടെത്തുക.</p>
         </div>
         <div className="faq-list">
           {FAQS.map((item, i) => (
