@@ -1,9 +1,9 @@
 import appIcon from '../assets/icon-1024b.webp'
 
 const POINTS = [
-  { title: 'Clear, Everyday Malayalam', desc: 'Simple explanations without difficult words.' },
-  { title: 'Built for Daily Reflection', desc: 'Read a little every day and live by its guidance.' },
-  { title: 'Free for Everyone', desc: 'Made possible through the generous support of readers like you.' },
+  { title: 'വ്യക്തവും ലളിതവുമായ മലയാളം', desc: 'ബുദ്ധിമുട്ടുള്ള വാക്കുകളില്ലാതെ ലളിതമായ വിശദീകരണങ്ങൾ.' },
+  { title: 'ദിവസേനയുള്ള ചിന്തയ്ക്കായി രൂപകൽപ്പന ചെയ്തത്', desc: 'ദിവസവും അൽപ്പം വായിക്കുക, അതിന്റെ മാർഗനിർദേശം ജീവിതത്തിൽ പകർത്തുക.' },
+  { title: 'എല്ലാവർക്കും സൗജന്യം', desc: 'നിങ്ങളെപ്പോലുള്ള വായനക്കാരുടെ ഉദാരമായ പിന്തുണയിലൂടെ സാധ്യമായത്.' },
 ]
 
 export default function About() {
@@ -14,15 +14,15 @@ export default function About() {
           <img src={appIcon} alt="Quran Lalithasaram logo" className="about-logo-img" />
         </div>
         <div>
-          <span className="eyebrow">Why Lalithasaram</span>
-          <h2>A Simpler Path to the Meanings of the Qur'an</h2>
-          <p>
-            The Quran Lalithasaram app and website have been developed to help ordinary readers understand
-            the messages, meanings, and teachings of the Holy Qur'an in a simple, clear, and accessible way.
+          <span className="eyebrow">എന്തുകൊണ്ട് ലളിതസാരം</span>
+          <h2>ഖുർആൻ ആശയങ്ങളിലേക്കുള്ള ലളിതമായ വഴി</h2>
+          <p className="ml">
+            വിശുദ്ധ ഖുർആന്റെ സന്ദേശങ്ങൾ സാധാരണക്കാർക്ക് ലളിതമായി മനസ്സിലാക്കാനും ജീവിതത്തിൽ പകർത്താനും സഹായിക്കുക
+            എന്ന ലക്ഷ്യത്തോടെയാണ് ഖുർആൻ ലളിതസാരം തയ്യാറാക്കിയിരിക്കുന്നത്.
           </p>
-          <p>
-            This digital platform is designed to deepen your connection with the Qur'an, encourage reflection
-            on its meanings, and help you apply its divine guidance in your daily life.
+          <p className="ml">
+            ഖുർആൻ കൂടുതൽ ആളുകളിലേക്ക് എത്തിക്കുക എന്നത് ഒരു വലിയ ദൗത്യമാണ്. ഈ സംരംഭത്തെ ഡിജിറ്റൽ ലോകത്ത് കൂടുതൽ
+            മികവോടെ മുന്നോട്ട് കൊണ്ടുപോകുന്നതിനും പരിപാലിക്കുന്നതിനും നിങ്ങളുടെ പിന്തുണ ആവശ്യമാണ്.
           </p>
           <div className="about-points">
             {POINTS.map(p => (

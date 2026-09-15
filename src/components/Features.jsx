@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 
 const FEATURES = [
-  { title: 'Simple Malayalam Translation', desc: 'Every verse translated into simple, natural Malayalam—clear, accurate, and easy to understand.', path: 'M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V2H6.5A2.5 2.5 0 004 4.5v15z' },
-  { title: 'Audio Recitation & Translation', desc: "Listen to beautiful Qur'an recitations while following the translation and understanding the meaning of every verse.", path: 'M9 18V5l12-2v13M9 18a3 3 0 11-6 0 3 3 0 016 0zM21 16a3 3 0 11-6 0 3 3 0 016 0z' },
-  { title: 'Word-by-Word Meaning', desc: "Tap any Qur'anic word to instantly view its Malayalam meaning.", path: 'M12 3v18M5 8l7-5 7 5M5 8v11a1 1 0 001 1h12a1 1 0 001-1V8' },
-  { title: 'Bookmarks', desc: 'Save your favorite verses and return to them anytime for reflection and inspiration.', path: 'M19 21l-7-4-7 4V5a2 2 0 012-2h10a2 2 0 012 2z' },
-  { title: 'Instant Search', desc: 'Find any surah, ayah, topic or keyword across the entire Qur\'an in seconds.', path: null, circle: true },
-  { title: 'Offline Reading', desc: "Read the Qur'an and its meanings anytime, even without an internet connection.", path: 'M12 2a10 10 0 000 20 10 10 0 010-20z' },
-  { title: 'Night Mode', desc: 'Enjoy a comfortable reading experience with a dark theme, ideal for early mornings and late nights.', path: 'M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z' },
+  { title: 'ലളിതമായ മലയാളം പരിഭാഷ', desc: 'ഓരോ വാക്യവും ലളിതവും സ്വാഭാവികവുമായ മലയാളത്തിലേക്ക് പരിഭാഷപ്പെടുത്തിയിരിക്കുന്നു — വ്യക്തവും കൃത്യവും എളുപ്പത്തിൽ മനസ്സിലാക്കാവുന്നതും.', path: 'M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V2H6.5A2.5 2.5 0 004 4.5v15z' },
+  { title: 'ഓഡിയോ പാരായണവും പരിഭാഷയും', desc: 'മനോഹരമായ ഖുർആൻ പാരായണം കേൾക്കുമ്പോൾ തന്നെ പരിഭാഷ പിന്തുടർന്ന് ഓരോ വാക്യത്തിന്റെയും അർത്ഥം മനസ്സിലാക്കാം.', path: 'M9 18V5l12-2v13M9 18a3 3 0 11-6 0 3 3 0 016 0zM21 16a3 3 0 11-6 0 3 3 0 016 0z' },
+  { title: 'വാക്ക് തിരിച്ചുള്ള അർത്ഥം', desc: 'ഏതൊരു ഖുർആൻ വാക്കിലും ടാപ്പ് ചെയ്ത് അതിന്റെ മലയാളം അർത്ഥം തൽക്ഷണം കാണാം.', path: 'M12 3v18M5 8l7-5 7 5M5 8v11a1 1 0 001 1h12a1 1 0 001-1V8' },
+  { title: 'ബുക്ക്മാർക്കുകൾ', desc: 'നിങ്ങളുടെ പ്രിയപ്പെട്ട വാക്യങ്ങൾ സൂക്ഷിച്ചുവെച്ച് എപ്പോൾ വേണമെങ്കിലും വീണ്ടും വായിച്ച് ചിന്തിക്കാം.', path: 'M19 21l-7-4-7 4V5a2 2 0 012-2h10a2 2 0 012 2z' },
+  { title: 'തൽക്ഷണ തിരയൽ', desc: 'ഏതൊരു സൂറത്തും ആയത്തും വിഷയവും വാക്കും സെക്കൻഡുകൾക്കുള്ളിൽ മുഴുവൻ ഖുർആനിലും കണ്ടെത്താം.', path: null, circle: true },
+  { title: 'ഓഫ്‌ലൈൻ വായന', desc: 'ഇന്റർനെറ്റ് കണക്ഷൻ ഇല്ലാതെ തന്നെ എപ്പോൾ വേണമെങ്കിലും ഖുർആനും അതിന്റെ അർത്ഥങ്ങളും വായിക്കാം.', path: 'M12 2a10 10 0 000 20 10 10 0 010-20z' },
+  { title: 'നൈറ്റ് മോഡ്', desc: 'അതിരാവിലെയും രാത്രി വൈകിയും അനുയോജ്യമായ ഡാർക്ക് തീമിലൂടെ സൗകര്യപ്രദമായ വായനാനുഭവം ആസ്വദിക്കാം.', path: 'M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z' },
 ]
 
 const N = FEATURES.length
@@ -81,9 +81,9 @@ export default function Features() {
     <section className="features" id="features">
       <div className="container">
         <div className="section-head">
-          <span className="eyebrow">Features</span>
-          <h2>Everything you need to read with understanding</h2>
-          <p>Designed from the ground up for readers who want more than just recitation — real understanding, every single day.</p>
+          <span className="eyebrow">സവിശേഷതകൾ</span>
+          <h2>മനസ്സിലാക്കി വായിക്കാൻ വേണ്ടതെല്ലാം</h2>
+          <p>വെറും പാരായണത്തിനപ്പുറം യഥാർത്ഥ ധാരണ ആഗ്രഹിക്കുന്ന വായനക്കാർക്കായി അടിസ്ഥാനം മുതൽ രൂപകൽപ്പന ചെയ്തത് — എല്ലാ ദിവസവും.</p>
         </div>
         <div className="feature-carousel">
           <div
