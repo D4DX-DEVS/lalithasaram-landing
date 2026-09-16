@@ -4,9 +4,9 @@ import landingScn2 from '../assets/landing-scn2.webp'
 import landingScn3 from '../assets/landing-scn3.webp'
 
 const HERO_IMAGES = [
-  { src: landingScn1 },
-  { src: landingScn2, style: { height: '70%', top: '50%', transform: 'translateY(-50%)' } },
-  { src: landingScn3 },
+  { src: landingScn1, alt: 'Surah list and home screen of the Quran Lalithasaram app' },
+  { src: landingScn2, alt: 'Quran Lalithasaram app navigation menu', style: { height: '70%', top: '50%', transform: 'translateY(-50%)' } },
+  { src: landingScn3, alt: 'Ayah reading view with Arabic text and Malayalam meaning' },
 ]
 
 export default function Hero() {
@@ -33,12 +33,9 @@ export default function Hero() {
           </p>
           <div className="hero-actions">
             <a href="#download" className="btn btn-primary">
-              ആപ്പ് ഡൗൺലോഡ് ചെയ്യുക
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
+              Download App
             </a>
-            <a href="#support" className="btn btn-ghost">പിന്തുണയ്ക്കൂ</a>
+            <a href="#support" className="btn btn-ghost">Support Us</a>
           </div>
         </div>
 
@@ -47,7 +44,7 @@ export default function Hero() {
             <img
               key={img.src}
               src={img.src}
-              alt="Quran Lalithasaram app preview"
+              alt={img.alt}
               className={`hero-visual-img${i === index ? ' active' : ''}`}
               style={img.style}
             />

@@ -7,12 +7,12 @@ import ayahNormal from '../assets/screenshots/06-ayah-normal.webp'
 import ayahWordByWord from '../assets/screenshots/07-ayah-wordbyword.webp'
 
 const SHOTS = [
-  { src: home, label: 'ഹോം' },
-  { src: ayahNormal, label: 'ആയത്ത് കാഴ്ച' },
-  { src: ayahWordByWord, label: 'വാക്ക് തിരിച്ച്' },
-  { src: mushaf, label: 'മുസ്ഹഫ്' },
-  { src: audio, label: 'ഓഡിയോ പ്ലെയർ' },
-  { src: settings, label: 'സെറ്റിംഗ്സ്' },
+  { src: home, label: 'Home' },
+  { src: ayahNormal, label: 'Ayah View' },
+  { src: ayahWordByWord, label: 'Word-by-word' },
+  { src: mushaf, label: 'Mushaf' },
+  { src: audio, label: 'Audio Player' },
+  { src: settings, label: 'Settings' },
 ]
 
 const N = SHOTS.length
@@ -35,7 +35,6 @@ export default function Screenshots() {
         <div className="section-head">
           <span className="eyebrow">സ്ക്രീൻഷോട്ടുകൾ</span>
           <h2>ആപ്പ് പ്രവർത്തനത്തിൽ കാണുക</h2>
-          <p>യഥാർത്ഥ ഖുർആൻ ലളിതസാരം ആപ്പിന്റെ ഒരു ദ്രുത കാഴ്ച — ഹോം, വായനാ കാഴ്ചകൾ, ഓഡിയോ, സെറ്റിംഗ്സ്.</p>
         </div>
         <div className="screenshot-coverflow">
           <button className="screenshot-nav prev" aria-label="Previous" onClick={() => go(-1)}>
