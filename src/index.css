@@ -16,12 +16,12 @@
   --focus-ring: 0 0 0 3px rgba(20,184,166,.45);
 }
 *{box-sizing:border-box; margin:0; padding:0;}
-html{scroll-behavior:smooth; overflow-x:hidden; width:100%; scrollbar-width:none;}
-html.is-scrolling{scrollbar-width:thin; scrollbar-color:rgba(11,17,32,.25) transparent;}
-html::-webkit-scrollbar{width:0;}
-html.is-scrolling::-webkit-scrollbar{width:8px;}
+html{scroll-behavior:smooth; overflow-x:hidden; width:100%; scrollbar-width:thin; scrollbar-color:transparent transparent;}
+html.is-scrolling{scrollbar-color:rgba(11,17,32,.25) transparent;}
+html::-webkit-scrollbar{width:8px;}
 html::-webkit-scrollbar-track{background:transparent;}
-html::-webkit-scrollbar-thumb{background-color:rgba(11,17,32,.25); border-radius:999px;}
+html::-webkit-scrollbar-thumb{background-color:transparent; border-radius:999px; transition:background-color .3s ease;}
+html.is-scrolling::-webkit-scrollbar-thumb{background-color:rgba(11,17,32,.25);}
 body{
   font-family:'Manrope', 'Noto Sans Malayalam', sans-serif;
   background:var(--bg);
