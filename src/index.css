@@ -302,7 +302,12 @@ nav{
 .amount-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:16px; margin-bottom:20px;}
 .amount-card{
   background:var(--card); border:1px solid var(--card-brd); border-radius:16px; padding:20px 16px;
-  display:flex; flex-direction:column; gap:8px;
+  display:flex; flex-direction:column; gap:8px; cursor:pointer;
+  transition:transform .2s, border-color .2s, box-shadow .2s;
+}
+.amount-card:hover{
+  transform:translateY(-3px); border-color:rgba(20,184,166,.4);
+  box-shadow:0 16px 32px -18px rgba(11,17,32,.35);
 }
 .amount-card strong{font-size:22px; font-weight:800; background:var(--gradient-text); -webkit-background-clip:text; background-clip:text; color:transparent;}
 .amount-card span{font-size:13px; color:var(--text-dim); line-height:1.5;}
