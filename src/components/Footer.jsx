@@ -9,15 +9,13 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <Logo markSize={36} />
-            <p>വിശുദ്ധ ഖുർആന്റെ സന്ദേശങ്ങളും ആശയങ്ങളും പഠനങ്ങളും സാധാരണക്കാർക്ക് ലളിതമായും വ്യക്തമായും എല്ലാവർക്കും സൗജന്യമായും മനസ്സിലാക്കാൻ സഹായിക്കുന്നു.</p>
+            <p>വിശുദ്ധ ഖുർആന്റെ സന്ദേശങ്ങളും ആശയങ്ങളും സാധാരണക്കാർക്ക് ലളിതമായും വ്യക്തമായും മനസ്സിലാക്കാൻ സഹായിക്കുന്നു.</p>
           </div>
           <div className="footer-col">
             <h4>Explore</h4>
             <ul>
               <li><a href="/#about">About Us</a></li>
-              <li><a href="/#features">Features</a></li>
               <li><a href="/#screenshots">Screenshots</a></li>
-              <li><a href="/#how">How it Works</a></li>
               <li><a href="/#download">Download</a></li>
             </ul>
           </div>
@@ -26,7 +24,6 @@ export default function Footer() {
             <ul>
               <li><a href="/#support">Donate</a></li>
               <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@d4dx.co" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
-              <li><a href="/#faq">FAQs</a></li>
             </ul>
           </div>
           <div className="footer-col">

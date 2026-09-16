@@ -35,7 +35,6 @@ export default function Screenshots() {
         <div className="section-head">
           <span className="eyebrow">സ്ക്രീൻഷോട്ടുകൾ</span>
           <h2>ആപ്പ് പ്രവർത്തനത്തിൽ കാണുക</h2>
-          <p>യഥാർത്ഥ ഖുർആൻ ലളിതസാരം ആപ്പിന്റെ ഒരു ദ്രുത കാഴ്ച — ഹോം, വായനാ കാഴ്ചകൾ, ഓഡിയോ, സെറ്റിംഗ്സ്.</p>
         </div>
         <div className="screenshot-coverflow">
           <button className="screenshot-nav prev" aria-label="Previous" onClick={() => go(-1)}>
