@@ -10,11 +10,28 @@ const REASONS = [
 ]
 
 const AMOUNTS = [
-  { value: '₹200', desc: 'ഒരു വലിയ ദൗത്യത്തിന്റെ ഭാഗമാകാം.' },
-  { value: '₹500', desc: 'കൂടുതൽ ആളുകളിലേക്ക് ഖുർആൻ സന്ദേശമെത്തിക്കാൻ ഒരു ചുവടുവെപ്പ്.' },
-  { value: '₹1,000', desc: 'ഡിജിറ്റൽ ഖുർആൻ സംരംഭത്തിന്റെ വളർച്ചക്ക് ശക്തമായ പിന്തുണ.' },
-  { value: '₹5,000', desc: 'ഖുർആൻ സന്ദേശങ്ങളുടെ വ്യാപനത്തിൽ പ്രധാന പങ്കാളിത്തം.' },
+  { value: '₹200', amount: 200, desc: 'ഒരു വലിയ ദൗത്യത്തിന്റെ ഭാഗമാകാം.' },
+  { value: '₹500', amount: 500, desc: 'കൂടുതൽ ആളുകളിലേക്ക് ഖുർആൻ സന്ദേശമെത്തിക്കാൻ ഒരു ചുവടുവെപ്പ്.' },
+  { value: '₹1,000', amount: 1000, desc: 'ഡിജിറ്റൽ ഖുർആൻ സംരംഭത്തിന്റെ വളർച്ചക്ക് ശക്തമായ പിന്തുണ.' },
+  { value: '₹5,000', amount: 5000, desc: 'ഖുർആൻ സന്ദേശങ്ങളുടെ വ്യാപനത്തിൽ പ്രധാന പങ്കാളിത്തം.' },
 ]
+
+const UPI_ID = 'vyapar.176971524101@hdfcbank'
+const UPI_PAYEE = 'Quran Lalithasaram'
+const RAZORPAY_URL = 'https://rzp.io/rzp/support-quran-lalithasaram'
+
+const isMobileDevice = () => /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+
+function upiLink(amount) {
+  const params = new URLSearchParams({
+    pa: UPI_ID,
+    pn: UPI_PAYEE,
+    am: String(amount),
+    cu: 'INR',
+    tn: 'Donation to Quran Lalithasaram',
+  })
+  return `upi://pay?${params.toString()}`
+}
 
 const BANK_ROWS = [
   { label: 'Account Name', value: 'D4DX INNOVATIONS LLP' },
@@ -40,6 +57,8 @@ function CopyButton({ text }) {
 }
 
 export default function Support() {
+  const mobile = isMobileDevice()
+
   return (
     <section className="support" id="support">
       <div className="container">
@@ -56,10 +75,16 @@ export default function Support() {
           <p className="amounts-lead">നിങ്ങൾക് എത്ര തുകയും സംഭാവന ചെയ്യാം</p>
           <div className="amount-grid">
             {AMOUNTS.map(a => (
-              <div className="amount-card" key={a.value}>
+              <a
+                className="amount-card"
+                href={mobile ? upiLink(a.amount) : RAZORPAY_URL}
+                target={mobile ? undefined : '_blank'}
+                rel={mobile ? undefined : 'noopener noreferrer'}
+                key={a.value}
+              >
                 <strong>{a.value}</strong>
                 <span>{a.desc}</span>
-              </div>
+              </a>
             ))}
           </div>
           <p className="amounts-note">തുക എത്രയായാലും, നിങ്ങളുടെ ആത്മാർത്ഥമായ പിന്തുണ വിലപ്പെട്ടതാണ്.</p>
@@ -74,7 +99,7 @@ export default function Support() {
             <div className="razorpay-card">
               <span className="eyebrow">Razorpay പേയ്മെന്റ്</span>
               <h3>ഗേറ്റ്‌വേ വഴി സംഭാവന ചെയ്യാൻ</h3>
-              <a href="https://rzp.io/rzp/lalithasaram-donation" target="_blank" rel="noopener noreferrer" className="razorpay-btn">
+              <a href={RAZORPAY_URL} target="_blank" rel="noopener noreferrer" className="razorpay-btn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" /></svg>
                 Support Now
               </a>
