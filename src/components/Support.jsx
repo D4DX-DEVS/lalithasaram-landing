@@ -122,6 +122,11 @@ export default function Support() {
               UPI ID: vyapar.176971524101@hdfcbank
               <CopyButton text="vyapar.176971524101@hdfcbank" />
             </div>
+            <div className="support-contact">
+              <span>For queries, please contact us</span>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@d4dx.co" target="_blank" rel="noopener noreferrer"><span className="label">Email:</span> info@d4dx.co</a>
+              <a href="tel:+919895804006"><span className="label">Call Now:</span> +91 98958 04006</a>
+            </div>
           </div>
         </div>
         <div className="support-closing ml">
